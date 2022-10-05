@@ -16,6 +16,12 @@ header {
 header button {
   margin-left: 20px;
 }
+form {
+  display: flex;
+  justify-content: flex-start;
+  margin: 5px;
+  gap: 10px;
+}
 button {
   background-color: #147bd5;
   border: none;
@@ -29,6 +35,20 @@ input,
 button {
   padding: 8px;
 }
+#data-conclusao {
+  margin-left: 30px;
+}
 #cancel {
   background-color: red;
+}
+.titulo {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+.tarefas li {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 16px;
+  list-style: none;
 }
