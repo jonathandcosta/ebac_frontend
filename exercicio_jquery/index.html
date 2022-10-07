@@ -14,15 +14,29 @@
     <h1>Minhas Tarefas</h1>
     <button type="button">Nova Tarefa ⬇</button>
   </header>
-  <form>
-    <input type="text" id="adiciona-tarefa" required placeholder="Digite a Tarefa" />
-    <input type="date" id="data-conclusao" required />
-
-    <button type="submit">Registrar</button>
-    <button type="reset" id="cancel">Cancelar</button>
-  </form>
-  <h1 class="titulo">Relação das Tarefa</h1>
   <div>
+    <form>
+      <input type="text" id="adiciona-tarefa" required placeholder="Digite a Tarefa" />
+      <input type="date" id="data-conclusao" required />
+      <button type="submit">Registrar</button>
+      <button type="reset" id="cancel">Cancelar</button>
+    </form>
+    <h1 class="titulo">Relação das Minhas Tarefas</h1>
+    <table id='relatorio'>
+      <thead>
+        <th> Descricao </th>
+        <th> Data </th>
+      </thead>
+      <tbody>
+      </tbody>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
+
+<!--
     <ul class="tarefas">
       <li>
         <label>
@@ -33,9 +47,4 @@
         </span>
       </li>
     </ul>
-  </div>
-  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-  <script src="main.js"></script>
-</body>
-
-</html>
+    -->
