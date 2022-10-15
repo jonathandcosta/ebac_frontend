@@ -19,6 +19,9 @@ header h1 {
 header button {
   margin-left: 20px;
 }
+#form {
+  display: none;
+}
 form {
   display: flex;
   justify-content: flex-end;

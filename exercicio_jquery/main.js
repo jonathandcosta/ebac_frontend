@@ -1,3 +1,4 @@
+/*ESTA FUNÇÃO CRIA O EFEITO DE ABRIR E ESCONDER O MENU INTERATIVO*/
 $(document).ready(function () {
   $("header button").click(function () {
     $("form").slideDown();
@@ -6,6 +7,7 @@ $(document).ready(function () {
     $("form").slideUp();
   });
 
+  /*ESTA FUNÇÃO MANTEM O MENU NO ESTADO PADRÃO APÓS A AÇÃO*/
   $("form").on("submit", function (e) {
     e.preventDefault();
 
@@ -24,6 +26,7 @@ $(document).ready(function () {
     $("#data-conclusao").val("");
   });
 
+  /*ESTA FUNÇÃO FORMATA A DATA PARA O PADRÃO BRASILEIRO*/
   function dataFormatada(date) {
     date = new Date();
     let ano = date.getFullYear();
