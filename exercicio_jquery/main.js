@@ -27,6 +27,20 @@ $(document).ready(function () {
   });
 
   /*ESTA FUNÇÃO FORMATA A DATA PARA O PADRÃO BRASILEIRO*/
+
+  function dataFormatada() {
+    const date = $("#data-conclusao").val();
+
+    const meuArrayStrings = date.split("-");
+
+    let ano = meuArrayStrings[0];
+    let mes = meuArrayStrings[1];
+    let dia = meuArrayStrings[2];
+
+    return dia + "-" + mes + "-" + ano;
+  }
+  /*
+
   function dataFormatada(date) {
     date = new Date();
     let ano = date.getFullYear();
@@ -34,5 +48,5 @@ $(document).ready(function () {
     let dia = date.getDate().toString().padStart(2, "0");
 
     return dia + "-" + mes + "-" + ano;
-  }
+  }*/
 });
