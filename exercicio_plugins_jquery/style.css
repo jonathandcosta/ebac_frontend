@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+section {
+  display: flex;
+  justify-content: center;
+}
+.title {
+  display: flex;
+  justify-content: center;
+}
+h1 {
+  color: rgb(172, 106, 81);
+  font-size: 3rem;
+  padding: 2rem;
+  font-family: monospace;
+}
+
+.form-campo {
+  margin-bottom: 16px;
+}
+.form-campo {
+  display: block;
+  font-weight: bold;
+}
+.form-campo label {
+  font-weight: bold;
+  display: block;
+}
+input {
+  border-radius: 4px;
+  font-size: 32px;
+  border: solid 4px rgb(237, 84, 28);
+  background-color: rgb(255, 251, 241);
+  color: black;
+  font-style: oblique;
+  margin-bottom: 6px;
+}
+button {
+  padding: 10px;
+}
