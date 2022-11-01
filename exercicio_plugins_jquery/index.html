@@ -24,11 +24,12 @@
         </div>
         <div class="form-campo">
           <label for="telefone">Telefone</label>
-          <input type="tel" id="telefone" name="telefone">
+          <input type="number" id="telefone" name="telefone">
         </div>
         <div class="form-campo">
           <label for="cpf">CPF</label>
-          <input type="number" id="cpf" name="cpf" required>
+          <input type="tel" id="cpf" name="cpf" required>
+          <!--o type foi alterado para "tel", pois assim o plugin mask. funciona normal mente-->
         </div>
         <div class="form-campo">
           <label for="email">E-mail:</label>
@@ -40,7 +41,8 @@
         </div>
         <div class="form-campo">
           <label for="cep">CEP:</label>
-          <input type="number" id="cep" name="cep" required>
+          <input type="tel" id="cep" name="cep" required>
+          <!--o type foi alterado para "tel", pois assim o plugin mask. funciona normal mente-->
         </div>
         <button type="submit">Enviar</button>
       </form>
