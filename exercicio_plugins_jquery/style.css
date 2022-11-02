@@ -19,6 +19,7 @@ h1 {
 }
 
 .form-campo {
+  font-size: 22px;
   margin-bottom: 16px;
 }
 .form-campo {
@@ -30,14 +31,25 @@ h1 {
   display: block;
 }
 input {
-  border-radius: 4px;
-  font-size: 32px;
-  border: solid 4px rgb(237, 84, 28);
+  border-radius: 6px;
+  font-size: 22px;
+  border: solid 2px rgb(237, 84, 28);
   background-color: rgb(255, 251, 241);
   color: black;
   font-style: oblique;
   margin-bottom: 6px;
+  padding: 6px;
 }
 button {
-  padding: 10px;
+  display: block;
+  width: 100%;
+  padding: 8px 0;
+  border: none;
+  background-color: rgb(237, 84, 28);
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: italic;
+  cursor: pointer;
+  border-radius: 6px;
 }
