@@ -1,3 +1,7 @@
+$corPrincipal: #182c61;
+$corSecundaria: #f5f6fa;
+$corTerciaria: #44bd32;
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +10,7 @@
 }
 
 body {
-  background-color: #f5f6fa;
+  background-color: $corSecundaria;
 }
 
 li {
@@ -20,64 +24,59 @@ li {
 }
 
 header {
-  background-color: #182c61;
+  background-color: $corPrincipal;
   position: sticky;
   top: 0;
   left: 0;
-}
 
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 0;
-}
-
-.menu {
-  display: flex;
-}
-
-.menu li {
-  font-weight: bold;
-  margin-left: 24px;
-}
-
-.menu li a {
-  color: #fff;
-  text-decoration: none;
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+  }
+  .menu {
+    display: flex;
+  }
+  .menu li {
+    font-weight: bold;
+    margin-left: 24px;
+  }
+  .menu li a {
+    color: $corSecundaria;
+    text-decoration: none;
+  }
 }
 
 section {
   padding: 56px 0;
-}
+  .products {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 32.66%);
+    column-gap: 1%;
+    row-gap: 4%;
+    width: 100%;
+  }
+  .product-item img {
+    width: 100%;
+    border-radius: 16px;
+  }
+  .product-button {
+    display: block;
+    background-color: $corTerciaria;
+    color: $corSecundaria;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 8px;
+    margin-top: 8px;
+    text-decoration: none;
 
-.products {
-  margin-top: 40px;
-  display: grid;
-  grid-template-columns: repeat(3, 32.66%);
-  column-gap: 1%;
-  row-gap: 4%;
-  width: 100%;
-}
-
-.product-item img {
-  width: 100%;
-  border-radius: 16px;
-}
-
-.product-button {
-  display: block;
-  background-color: #44bd32;
-  color: #fff;
-  text-align: center;
-  padding: 8px 0;
-  border-radius: 8px;
-  margin-top: 8px;
-  text-decoration: none;
-}
-
-.product-button:hover {
-  background-color: #4cd137;
+    &:hover {
+      background-color: $corSecundaria;
+      color: $corPrincipal;
+    }
+  }
 }
 
 @media screen and (max-width: 1023px) {
