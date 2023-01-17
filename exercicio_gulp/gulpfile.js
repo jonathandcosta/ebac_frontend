@@ -2,25 +2,21 @@ const gulp = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
 const imagemin = require("gulp-imagemin");
 
-function compilaSass() {
+function styles() {
   return gulp
-    .src("./source/styles/main.scss")
-    .pipe(sourcemaps.init())
-    .pipe(
-      sass({
-        outputStyle: "compressed",
-      })
-    )
-    .pipe(sourcemaps.write("./maps"))
+    .src("./src/styles/*.scss")
+    .pipe(sass({ outputStyle: "compressed" }))
     .pipe(gulp.dest("./build/styles"));
 }
 
-function comprimeImagens() {
+function images() {
   return gulp
     .src("./source/images/*")
     .pipe(imagemin())
     .pipe(gulp.dest("./build/images"));
 }
+exports.default = gulp.parallel(styles, images);
 
-exports.sass = compilaSass;
-exports.imagemin = comprimeImagens;
+exports.watch = function () {
+  gulp.watch("./src/styles/*.scss", gulp.parallel(styles));
+};
