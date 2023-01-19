@@ -4,7 +4,7 @@ const imagemin = require("gulp-imagemin");
 
 function styles() {
   return gulp
-    .src("./src/styles/*.scss")
+    .src("./source/styles/main.scss")
     .pipe(sass({ outputStyle: "compressed" }))
     .pipe(gulp.dest("./build/styles"));
 }
@@ -18,5 +18,5 @@ function images() {
 exports.default = gulp.parallel(styles, images);
 
 exports.watch = function () {
-  gulp.watch("./src/styles/*.scss", gulp.parallel(styles));
+  gulp.watch("./source/styles/*.scss", gulp.parallel(styles));
 };
