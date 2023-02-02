@@ -5,9 +5,9 @@ const uglify = require("gulp-uglify");
 
 function comprimeJavaScript() {
   return gulp
-    .src("./source/js/*.js")
+    .src("./source/scripts/*.js")
     .pipe(uglify())
-    .pipe(gulp.dest("./build/js"));
+    .pipe(gulp.dest("./build/scripts"));
 }
 
 function styles() {
