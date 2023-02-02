@@ -1,0 +1,1 @@
+function calculaIdade(a){return 2023-a}let anoNascimento=prompt("Em que ano você nasceu?");anoNascimento=parseInt(anoNascimento),alert("Você tem: "+calculaIdade(anoNascimento));

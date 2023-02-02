@@ -23,7 +23,8 @@ function images() {
     .pipe(imagemin())
     .pipe(gulp.dest("./build/images"));
 }
-exports.default = gulp.parallel(styles, images, scripts);
+
+exports.default = gulp.parallel(styles, images, comprimeJavaScript);
 
 exports.watch = function () {
   gulp.watch("./source/styles/*.scss", gulp.parallel(styles));
