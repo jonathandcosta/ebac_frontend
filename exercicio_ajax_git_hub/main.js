@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  //variaveis referenciando os ID's dos campos a serem alimentado pelos dados da API do github
+  //variaveis referenciando os ID's no HTML para os campos serem alimentados pelos dados da API vinda do github
 
   const nameElement = document.querySelector("#name");
   const usernameElement = document.querySelector("#username");
@@ -8,12 +8,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const followersElement = document.querySelector("#followers");
   const followingElement = document.querySelector("#following");
   const linkElement = document.querySelector("#link");
+
+  //introdução ao github
   const endpoint = `https://api.github.com/users/jonathandcosta`;
 
+  //solicitação as informações na API do github
   fetch(endpoint)
     .then(function (res) {
       return res.json();
     })
+
+    //resposta em em dados via json para preenchimento dos campos
     .then(function (json) {
       nameElement.innerText = json.name;
       usernameElement.innerText = json.login;
@@ -23,6 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
       followingElement.innerText = json.following;
       linkElement.href = json.html_url;
     })
+
+    //em caso de erro no funcionamento envia uma mensagem ao usuário
     .catch(function (erro) {
       alert("ocorreu um erro");
     });
