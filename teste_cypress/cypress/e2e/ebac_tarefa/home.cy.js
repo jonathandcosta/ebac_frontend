@@ -6,6 +6,9 @@ describe('Testes de funcionalidades', () => {
   });
 
   it('Deve testar a inclusão do contato', () => {
+    cy.get('[type="text"]').type('Jonathan Costa');
+    cy.get('[type="email"]').type('jd@gmail.com');
+    cy.get('[type="tel"]').type('84 9 9904-3539');
     cy.get('button[type="submit"]').click();
   });
 
